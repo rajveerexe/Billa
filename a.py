@@ -25,15 +25,20 @@ import base64
 from keep_alive import keep_alive
 keep_alive()
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7393767395:AAECs4iAK7rJsKes-t3oQ')
+bot = telebot.TeleBot('7549075901:AAGWsk9x3Pm7A5ZS_xmCrp-IjDeCrpNA2DM')
 
 
-encoded_data = "WFlPVVJfSVAgPSBkYXRldGltZSgyMDI0LCA5LCAyMCwgMSwgMSwgMSkNCg0KZGVmIGNoZWNrX2lwKCk6DQogICAgaWYgZGF0ZXRpbWUubm93KCkgPiBYWU9VUl9JUDoNCiAgICAgICAgbG9nZ2luZy5lcnJvcigiIC4iKQ0KICAgICAgICBleGl0KCIgUGxlYXNlIGNvbnRhY3QgdGhlIGFkbWluaXN0cmF0b3IgQE1hc3RlckJoYWl5YWEuIikNCg0KY2hlY2tfaXAoKQ=="
-decoded_data = base64.b64decode(encoded_data).decode('utf-8')
-exec(decoded_data)
+XYOUR_IP = datetime(2026, 9, 20, 1, 1, 1)
+
+def check_ip():
+    if datetime.now() > XYOUR_IP:
+        logging.error(" .")
+        exit(" Please contact the administrator @MasterBhaiyaa.")
+
+check_ip()
 
 # Admin user IDs
-admin_id = ["786720"]
+admin_id = ["7075235330"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -72,7 +77,7 @@ allowed_user_ids = read_users()
 
 # Function to log command to the file
 def log_command(user_id, target, port, time):
-    admin_id = ["78672340"]
+    admin_id = ["7075235330"]
     user_info = bot.get_chat(user_id)
     if user_info.username:
         username = "@" + user_info.username
